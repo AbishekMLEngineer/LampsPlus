@@ -5,22 +5,18 @@ import org.testng.annotations.Test;
 
 import basePackage.SignPage;
 
-public class SignPageTest {
-	BaseTest obj2;
+public class SignPageTest extends BaseTest{
+	
 	SignPage obj ;
 	Boolean stu;
-	WebDriver driver;
 	@Test
 	public void navigateToSignPage(){
-	
-	obj2= new BaseTest("chrome");
-	driver = obj2.VerifyPageTitle("chrome");
 	obj = new SignPage(driver);
 	stu = obj.navigateToSignIn();
-	if(stu =true){	
-		System.out.println("hello all");
 	}
-		
+	@Test(priority=2)
+	public void getHandles(){
+		stu = obj.handlingWindows();
 	}
 
 }

@@ -9,13 +9,12 @@ import org.testng.annotations.Test;
 
 public class BaseTest {
 	WebDriver driver;
-	public BaseTest(String string) {
-	}
-	
+	@BeforeTest
+	@Parameters("browser")
 	public WebDriver VerifyPageTitle(String browser)
 	{
 		if(browser.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver","C://chromedriver_win32(1)//chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C://chromedriver_win32(1)//chromedriver_win32//chromedriver.exe");
 			 driver = new ChromeDriver();
 		}
 		if(browser.equalsIgnoreCase("IE")){
