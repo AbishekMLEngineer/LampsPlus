@@ -65,7 +65,7 @@ public List<Entry<String, Integer>> sortByValue(Map<String, Integer> wordMap){
  
 public static void main(String a[]){
     MaxDuplicateWordCount mdc = new MaxDuplicateWordCount();
-    Map<String, Integer> wordMap = mdc.getWordCount("C:/MyTestFile.txt");
+    Map<String, Integer> wordMap = mdc.getWordCount("E:\\Jmeter123\\Gonna.txt");
     List<Entry<String, Integer>> list = mdc.sortByValue(wordMap);
     for(Map.Entry<String, Integer> entry:list){
         System.out.println(entry.getKey()+" ==== "+entry.getValue());

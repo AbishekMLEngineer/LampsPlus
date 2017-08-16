@@ -12,12 +12,11 @@ public class BaseAddingProductsToCart {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(id ="cartIcon")
+	@FindBy(id ="yourCart")
 	WebElement cartButton;
 	
 	public void navigateToCart(){
 		cartButton.click();
-		
 		
 	}
 	

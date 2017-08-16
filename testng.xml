@@ -4,8 +4,8 @@
 	<parameter name="browser" value="chrome"></parameter>
   <test name="Test">
     <classes>
-      <class name="TestPackageClasses.SignPageTest"/>
-      <class name="TestPackageClasses.AddingProductsToCart"/>
+      <class name="TestPackageClasses.SignPageTest"/> 
+      <class name="TestPackageClasses.AddingProductsToCartTest"/>
     </classes>
     
   </test> <!-- Test -->

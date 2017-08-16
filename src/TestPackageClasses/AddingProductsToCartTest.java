@@ -1,17 +1,20 @@
 package TestPackageClasses;
 
-import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import basePackage.BaseAddingProductsToCart;
 
-public class AddingProductsToCart extends BaseTest {
+public class AddingProductsToCartTest extends BaseTest  {
+	
 	BaseAddingProductsToCart obj;
+	BaseTest objOfBaseTest;
 	
 	@Test
 	public void AddingProducts(){
-		//Action act = new Action(driver); 
-			
+		System.out.println("required driver is  "+driver);
+		String str =driver.getTitle();
+		System.out.println("title is "+str);
 		obj= new BaseAddingProductsToCart(driver);
 		obj.navigateToCart();
 	}
