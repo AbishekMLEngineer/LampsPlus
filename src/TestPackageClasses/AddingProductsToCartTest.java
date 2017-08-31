@@ -1,6 +1,10 @@
 package TestPackageClasses;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import basePackage.BaseAddingProductsToCart;
@@ -9,8 +13,16 @@ public class AddingProductsToCartTest extends BaseTest  {
 	
 	BaseAddingProductsToCart obj;
 	BaseTest objOfBaseTest;
-	
 	@Test
+	public void checkelements(){
+		List<WebElement> ele = (List<WebElement>) driver.findElement(By.id("aChandeliers"));
+		//List<WebElement> lis=ele;
+		for (WebElement ele1 :ele){
+			System.out.println(ele1.getText());
+		}
+	}
+	
+//	@Test
 	public void AddingProducts(){
 		System.out.println("required driver is  "+driver);
 		String str =driver.getTitle();
