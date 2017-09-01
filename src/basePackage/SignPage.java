@@ -11,10 +11,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.log4testng.Logger;
+
+import TestPackageClasses.SignPageTest;
 
 public class SignPage {
 	WebDriver driver;
-	
+	private  final Logger log = Logger.getLogger(SignPage.class);
 	public SignPage(WebDriver driver){
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
@@ -29,6 +32,7 @@ public class SignPage {
 	
 	
 	public boolean navigateToSignIn(){
+		
 		wait = new WebDriverWait(driver,2);
 		driver.get("http://www.lampsplus.com/");
 	//	wait.until(ExpectedConditions.visibilityOf(SignInButton));
@@ -46,6 +50,7 @@ public class SignPage {
 		}
 	}
 	public boolean handlingWindows(){
+		
 		Set<String> allWindowsHandles = driver.getWindowHandles();
 		for(String ele :allWindowsHandles){
 			System.out.println("here are the handle names "+ele);
