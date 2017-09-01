@@ -19,7 +19,7 @@ public class SignPage {
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(id="hdrSignIn")
+	@FindBy(id="hdxSignIn")
 	WebElement SignInButton; 
 	
 	@FindBy(css="input[type ='submit']")
@@ -31,7 +31,7 @@ public class SignPage {
 	public boolean navigateToSignIn(){
 		wait = new WebDriverWait(driver,2);
 		driver.get("http://www.lampsplus.com/");
-		wait.until(ExpectedConditions.visibilityOf(SignInButton));
+	//	wait.until(ExpectedConditions.visibilityOf(SignInButton));
 		SignInButton.click();
 		driver.switchTo().frame("signInToolTip");
 		driver.findElement(By.id("UserName")).sendKeys("abi111@mailinator.com");
