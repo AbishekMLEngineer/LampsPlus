@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 
 import basePackage.SignPage;
 
-
 public class SignPageTest {
 	final static Logger logger = Logger.getLogger(SignPageTest.class);
 	public WebDriver driver = BaseTest.setBrowser();
